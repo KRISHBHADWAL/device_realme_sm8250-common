@@ -353,6 +353,7 @@ PRODUCT_PACKAGES += \
     OPlusFrameworksResCommon \
     OPlusSettingsResCommon \
     OPlusSystemUIResCommon \
+    OPlusSystemUIResCommon \
     OPlusTetheringResCommon \
     WifiResTarget
 
