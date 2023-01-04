@@ -84,18 +84,7 @@ on boot
     chown system system /sys/kernel/oplus_display/hbm
     chown system system /sys/kernel/oplus_display/notify_fppress
     chown system system /sys/kernel/oplus_display/panel_serial_number
-
-    # DC Dimming
-    chown system system /sys/kernel/oplus_display/dimlayer_bl_en
-    chmod 0660 /sys/kernel/oplus_display/dimlayer_bl_en
-
-    # Sensors
-    chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
-
-    # Touchpanel
-    write /proc/touchpanel/game_switch_enable 1
-    write /proc/touchpanel/smooth_level 3
-    write /proc/touchpanel/sensitive_level 3
+    chown system system /sys/kernel/oplus_display/power_status
     chown system system /dev/tp_misc
     chown system system /proc/touchpanel/tp_fw_update
     chown system system /proc/touchpanel/oplus_tp_limit_enable
@@ -108,7 +97,12 @@ on boot
     chown system system /proc/touchpanel/kernel_grip_handle
     chown system system /proc/touchpanel/curved_size
     chown system system /proc/touchpanel/charge_detect
-    chown system system /proc/touchpanel/wireless_charge_detect
+    write /proc/touchpanel/smooth_level 3
+    write /proc/touchpanel/sensitive_level 3
+
+
+    # Sensors
+    chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
 
 on property:ro.boot.prjname=*
     # Display
