@@ -285,9 +285,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
-# Light
+# LiveDisplay
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.oplus
+    vendor.lineage.livedisplay@2.1-service.oplus
 
 # Media
 PRODUCT_COPY_FILES += \
